@@ -3,7 +3,7 @@ import numpy as np
 import math
 from scipy.stats import mode
 pd.set_option('display.max_columns', None)
-data = pd.read_csv(r"C:\Users\Лиза\Downloads\homework.csv")
+data = pd.read_csv("homework.csv")
 data['Цвет глаз'] = data['Цвет глаз'].fillna(data['Цвет глаз'].mode()[0])
 data = pd.get_dummies(data, columns=['Цвет глаз', 'Высшая школа', 'Округ'])
 data['Во сколько встаете'] = (data['Во сколько встаете']-np.min(data['Во сколько встаете']))/(np.max(data['Во сколько встаете'])-np.min(data['Во сколько встаете']))
