@@ -23,7 +23,7 @@ def euclidean_distance(row1, row2):
         distance += (row1[i] - row2[i])**2
     return np.sqrt(distance)
 
-def prediction(x_train, y_train, x_test, k):
+def prediction(x_train, x_test, k):
     predictions = []
 
     for i in x_test:
@@ -44,7 +44,7 @@ def prediction(x_train, y_train, x_test, k):
 
     return predictions
 
-y_pred = prediction(x_train, y_train, x_test, 7)
+y_pred = prediction(x_train, x_test, 7)
 print(y_pred)
 
 sumaccurate = 0
